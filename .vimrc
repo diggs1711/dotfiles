@@ -20,6 +20,8 @@ set directory^=$HOME/.vim/swap//
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'rust-lang/rust.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'ryanoasis/vim-devicons'
@@ -50,7 +52,7 @@ let NERDTreeShowHidden=1
 
 set encoding=UTF-8
 
-let g:airline_theme='badwolf'
+let g:airline_theme='simple'
 let g:airline_powerline_fonts = 1
 set background=dark
 
@@ -58,6 +60,7 @@ filetype plugin indent on
 colorscheme one
 syntax enable
 set number
+
 highlight Normal ctermbg=None
 highlight LineNr ctermfg=DarkGrey
 
