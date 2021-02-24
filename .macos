@@ -143,4 +143,11 @@ defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 
+###################################################
+#
+# Rectangle 
+#
+##################################################
+defaults write com.knollsoft.Rectangle todo -int 1
+defaults write com.googlecode.iterm2 DisableWindowSizeSnap -integer 1
 
