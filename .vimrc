@@ -16,23 +16,31 @@ if (empty($TMUX))
 endif
 
 set backupdir=~/.vim/backup
-set directory^=$HOME/.vim/swap//
+set directory^=$HOME/.vim/vimswap//
 
 call plug#begin('~/.vim/plugged')
+
+if has('nvim') || has('patch-8.0.902')
+  Plug 'mhinz/vim-signify'
+else
+  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+endif
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'rust-lang/rust.vim'
 Plug 'vim-syntastic/syntastic'
-Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'preservim/nerdtree'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -52,7 +60,7 @@ let NERDTreeShowHidden=1
 
 set encoding=UTF-8
 
-let g:airline_theme='simple'
+let g:airline_theme='night_owl'
 let g:airline_powerline_fonts = 1
 set background=dark
 

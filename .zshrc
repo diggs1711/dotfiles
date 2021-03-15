@@ -5,6 +5,9 @@ export DOTFILES=$HOME/.dotfiles
 export ZSH=$HOME/.oh-my-zsh
 
 
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -131,3 +134,4 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 export FZF_DEFAULT_OPTS='--height 40% --preview "cat {}" --preview-window right:60%:wrap'
 set rtp+=/usr/local/opt/fzf
 
+source /Users/david/OVO/au-myovo-ui/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
