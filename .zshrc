@@ -1,10 +1,3 @@
-# Path to your dotfiles.
-export DOTFILES=$HOME/.dotfiles
-
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -12,6 +5,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Path to your dotfiles.
+export DOTFILES=$HOME/.dotfiles
+
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -77,7 +75,7 @@ ZSH_CUSTOM=$DOTFILES
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws npm rust osx terraform thefuck themes tmux vscode yarn brew docker dotenv node scala z jsontools)
+plugins=(git aws npm rust osx terraform thefuck themes tmux vscode yarn brew docker dotenv node scala z jsontools zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -134,4 +132,3 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 export FZF_DEFAULT_OPTS='--height 40% --preview "cat {}" --preview-window right:60%:wrap'
 set rtp+=/usr/local/opt/fzf
 
-source /Users/david/OVO/au-myovo-ui/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
