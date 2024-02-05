@@ -9,7 +9,3 @@ do
     stow $folder
 done
 popd
-
-pushd ./netflix
-./stow
-popd
