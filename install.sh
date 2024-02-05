@@ -1,6 +1,15 @@
-# brew install stow
-# brew install zsh
-# brew install zsh-autosuggestions
+#!/usr/bin/env zsh
+# I am using zsh instead of bash.  I was having some troubles using bash with
+# arrays.  Didn't want to investigate, so I just did zsh
+pushd $DOTFILES
+for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
+do
+    echo "stow $folder"
+    stow -D $folder
+    stow $folder
+done
+popd
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
+pushd ./netflix
+./stow
+popd
