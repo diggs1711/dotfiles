@@ -56,5 +56,9 @@ return require('packer').startup(function(use)
     {'L3MON4D3/LuaSnip'},
     {'rafamadriz/friendly-snippets'}
   }
+
+  if packer_bootstrap then
+    require('packer').sync()
+  end
 }
 end)
