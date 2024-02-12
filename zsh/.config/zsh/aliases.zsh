@@ -18,3 +18,7 @@ alias pscpu='ps auxf | sort -nr -k 3 | head -5'
 
 
 alias ls='ls --color=auto'
+
+alias bb="brazil-build"
+alias bbt="brazil-build test"
+alias bbs="brazil-build start"
