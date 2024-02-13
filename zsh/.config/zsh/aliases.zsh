@@ -22,3 +22,7 @@ alias ls='ls --color=auto'
 alias bb="brazil-build"
 alias bbt="brazil-build test"
 alias bbs="brazil-build start"
+
+
+# Git
+alias glrm="git pull --rebase origin mainline"
