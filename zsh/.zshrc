@@ -102,3 +102,4 @@ source $ZSH/oh-my-zsh.sh
 alias vim="nvim"
 
 source ~/.config/zsh/aliases.zsh
+export PATH="$HOME/.toolbox/bin:$PATH"
