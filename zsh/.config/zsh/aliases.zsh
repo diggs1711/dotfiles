@@ -26,3 +26,6 @@ alias bbs="brazil-build start"
 
 # Git
 alias glrm="git pull --rebase origin mainline"
+
+# nvim
+alias v="nvim ."
