@@ -4,6 +4,9 @@ size = 18
 [font.normal]
 family = "UbuntuMono Nerd Font"
 
+[window]
+opacity = 0.9
+
 [window.padding]
 x = 7
 y = 0
