@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting rust node you-should-use zsh-bat)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting rust node you-should-use zsh-bat zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,3 +103,7 @@ alias vim="nvim"
 
 source ~/.config/zsh/aliases.zsh
 export PATH="$HOME/.toolbox/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
